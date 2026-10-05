@@ -1,6 +1,6 @@
 # Weather App
 
-A browser-based weather app that displays current conditions and forecasts for Indian cities.
+A responsive weather app showing current conditions, forecasts, and sunrise/sunset times, with day/night visuals. Built with HTML, CSS, JavaScript, and the OpenWeather API.
 
 ## Features
 
@@ -12,9 +12,9 @@ A browser-based weather app that displays current conditions and forecasts for I
 - Changes the background video based on weather conditions, with a darker appearance at night.
 - Adapts the layout for mobile screens and respects Save-Data and slow-network preferences.
 
-## Run locally
+## Deploy to Vercel
 
-1. Deploy the `Weather-App` folder to Vercel.
+1. Import this GitHub repository into Vercel.
 2. In the Vercel project settings, add an environment variable named `OPENWEATHER_API_KEY` with your OpenWeather API key.
 3. Redeploy the project after adding or changing the environment variable.
 
@@ -30,4 +30,4 @@ The app uses OpenWeather's Current Weather, Geocoding, and forecast APIs through
 
 ## API key security
 
-Never put the API key in `weather.js` or another client-side file. If the key was committed to Git, revoke or rotate it in your OpenWeather account before deploying; removing it from the latest code does not erase it from the repository history. Keep `.env.local` out of Git.
+Never put the API key in `weather.js` or another client-side file. If a key was committed to Git, revoke or rotate it in your OpenWeather account before deploying; removing it from the latest code does not erase it from repository history. Keep `.env.local` out of Git.
