@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    
+    <title> ☀️ Weather App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Background video: two stacked layers, JS crossfades between them -->
+    <video id="bg-video-a" class="video-layer is-active" src="./assets/cloud.mp4" data-src="./assets/cloud.mp4" muted loop playsinline autoplay preload="auto"></video>
+<video id="bg-video-b" class="video-layer" muted loop playsinline preload="none"></video>
+    <div class="overlay"></div>
+
+    <div class="app-container">
+
+        <div class="weather-box">
+
+            <!-- Search -->
+            <div class="search-wrapper">
+                <input
+                    type="text"
+                    id="city"
+                    class="form-control"
+                    placeholder="Search city..."
+                    autocomplete="off"
+                    aria-label="Search city">
+
+                <button id="btn" class="btn btn-light" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                    <span class="spinner-border spinner-border-sm d-none" id="btn-spinner" role="status" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Inline status / error -->
+            <div id="status-banner" class="status-banner d-none" aria-live="polite"></div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="weather-container">
+                    <!-- Slides render here -->
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="app-footer">Made with <span aria-label="sun">☀️</span> in India</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="weather.js"></script>
+
+</body>
+
+</html>
